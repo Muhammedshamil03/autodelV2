@@ -36,9 +36,8 @@ Bot = Client(name="auto-delete",
 @Bot.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
     await message.reply(START_MSG.format(message.from_user.mention)),
-        reply_markup=reply_markup, 
-        disable_web_page_preview=True,      
-        parse_mode='html'
+        disable_web_page_preview=True      
+        
     )
 
 @User.on_message(filters.chat(GROUPS))
